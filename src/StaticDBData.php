@@ -9,8 +9,6 @@ abstract class StaticDBData
 {
     protected static $cachedData = [];
 
-    protected $data = [];
-
     protected $primaryKey = 'id';
 
     public function toArray(): array
@@ -58,7 +56,9 @@ abstract class StaticDBData
 
     protected function prepareData(): array
     {
-        return collect($this->data())
+        $collection = new Collection($this->data());
+
+        return $collection
             ->keyBy($this->primaryKey)
             ->toArray();
     }
