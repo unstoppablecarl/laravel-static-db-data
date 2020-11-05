@@ -1,0 +1,50 @@
+{
+    "name": "unstoppablecarl/laravel-static-db-data",
+    "description": "Laravel static data synced between code and db",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "static data"
+    ],
+    "homepage": "https://github.com/unstoppablecarl/laravel-static-db-data",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carl Olsen",
+            "email": "unstoppablecarlolsen@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7",
+        "illuminate/support": "^8.6",
+        "illuminate/database": "^8.6"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.1",
+        "phpunit/phpunit": "^9.3",
+        "mockery/mockery": "^1.4",
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "UnstoppableCarl\\StaticDBData\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "UnstoppableCarl\\StaticDBData\\Tests\\": "tests/"
+        }
+    },
+    "support": {
+        "issues": "https://github.com/unstoppablecarl/laravel-static-db-data/issues",
+        "source": "https://github.com/unstoppablecarl/laravel-static-db-data"
+    },
+    "scripts": {
+        "phpunit": "phpunit",
+        "phpcs": "phpcs src tests --standard=psr2 -sp --colors",
+        "test": [
+            "@phpunit",
+            "@phpcs"
+        ]
+    }
+}
