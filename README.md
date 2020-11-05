@@ -162,6 +162,33 @@ Gate::define('featureGama', function (User $user) {
 });
 ```
 
+## StaticDBData class methods
+
+```php
+
+use App\Models\StaticDBData\Plans;
+
+$plans = new Plans();
+// get data keyed by primary key
+$plans->toArray(); 
+
+// same as ->toArray but returns an Collection
+$plans->toCollection(); 
+
+// returns array item with primary key matching 99, or null when not found
+$plans->find(99); 
+
+// same as ->find() but throws a StaticDBDataNotFoundException when not found
+$plans->findOrFail(99); 
+
+// checks if primary key value exists, returns bool
+$plans->exists(99); 
+
+// returns the primary key
+$plans->primaryKey();
+
+```
+
 ## Solution Requirements
 There are many ways to handle this problem but none met all of my requirements.
 
@@ -173,3 +200,4 @@ There are many ways to handle this problem but none met all of my requirements.
  - cleanly organize the data in code
  - avoid querying the db for data that does not change at runtime
  - be able to easily understand the data in the db without the matching code
+
