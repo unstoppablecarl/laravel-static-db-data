@@ -18,8 +18,12 @@ The laravel application will need to have code that behaves differently dependin
 
 ```php
 $user = Auth::user();
-if($user->plan_id === 1){
-    // @TODO deny access to premum and pro features when user has free plan
+if($user->plan_id !== 2){
+    // deny access to feature requiring Premium plan
+}
+
+if($user->plan_id !== 3){
+    // deny access to feature requiring Pro plan
 }
 
 ```
