@@ -163,7 +163,9 @@ Gate::define('featureGama', function (User $user) {
 ```
 
 ## Solution Requirements
-There are many ways to handle this problem but none met all of my requirements. These were my solution requirements.
+There are many ways to handle this problem but none met all of my requirements.
+
+**Requirements:**
 
  - keep ids in code and db in sync
  - use foreign key integrity in the db using normal integer ids
