@@ -2,3 +2,4 @@
 .phpunit.result.cache
 _coverage
 _coverage/*
+vendor
