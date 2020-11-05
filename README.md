@@ -1,4 +1,4 @@
-# laravel-static-db-data
+# Laravel Static DB Data
 
 Sync static data between code and db.
 
